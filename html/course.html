@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>course</title>
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_819176_gjhe4xn07jt.css">
+
+</head>
+<body>
+<!--顶部悬浮-->
+<div class="ttop">
+    <div class="left">
+        <img src="../img/logox.png">
+    </div>
+    <div class="right">
+        <a href="index.html">HOME  主页</a>
+        <a href="about.html">ABOUT 关于</a>
+        <a href="course.html">COURSE 课程</a>
+        <a href="story.html">STORY 故事</a>
+        <a href="enviroment.html">ENVIROMENT 环境</a>
+        <a href="">EVENT 活动</a>
+        <a href="contcat.html">CONTACT 联系</a>
+    </div>
+    <i class="iconfont icon-menu"></i>
+    <div class="smenu">
+        <a href="index.html">HOME  主页</a>
+        <a href="about.html">ABOUT 关于</a>
+        <a href="course.html">COURSE 课程</a>
+        <a href="story.html">STORY 故事</a>
+        <a href="enviroment.html">ENVIROMENT 环境</a>
+        <a href="">EVENT 活动</a>
+        <a href="contcat.html">CONTACT 联系</a>
+    </div>
+</div>
+<!--顶部logo-->
+<div class="top_logo">
+    <img src="../img/logox.png" >
+</div>
+<!--菜单栏-->
+<div class="menu container">
+    <a href="index.html">HOME  主页</a>
+    <a href="about.html">ABOUT 关于</a>
+    <a href="course.html">COURSE 课程</a>
+    <a href="story.html">STORY 故事</a>
+    <a href="enviroment.html">ENVIROMENT 环境</a>
+    <a href="">EVENT 活动</a>
+    <a href="contcat.html">CONTACT 联系</a>
+</div>
+<!--菜单栏结束-->
+<!-- 标题部分-->
+<div class="title">
+    <h4>COURS 课程</h4>
+    <p>Fullfill All Your Intentions About Art.</p>
+</div>
+<!--标题部分结束-->
+<!--course 展示-->
+<div class="goods1">
+        <ul class="container">
+            <li>
+                <i></i>
+                    <b>基础素描</b>
+
+            </li>
+            <li>
+                <i> </i>
+                    <b>综合色彩</b>
+
+            </li>
+            <li>
+                <i></i>
+                    <b>国画工笔</b>
+
+            </li>
+            <li>
+                <i></i>
+                   <b>传统油画</b>
+
+            </li>
+        </ul>
+</div>
+<!--展示结束-->
+<!--轮播图-->
+<div class="goods4">
+            <div class="imgs">
+                <img src="../img/downbanner.jpg">
+                <img src="../img/downbanner1.jpg">
+                <img src="../img/downbanner2.jpg">
+                <img src="../img/downbanner3.jpg">
+                <img src="../img/downbanner4.jpg">
+                <img src="../img/downbanner5.jpg">
+            </div>
+            <div class="text2"> A painting lives its life like a living being, experiencing changes everyday life imposes </div>
+</div>
+<!--底部-->
+<!--底部-->
+<div class="footer" >
+    <div class="text">©Terms of Use | Privacy Policy TM & © 2010 - 2020  睦野空间  睦野画舍官方网站 MUYE  Studio. All Rights Reserved. TM & © MUYE  Studio. All Rights Reserved.</div>
+    <img src="../img/logox.png">
+</div>
+<!--结束-->
+</body>
+<script>
+    // <!--悬浮窗口-->
+    let ttop = document.querySelector(".ttop");
+    let bh = 0;
+    window.onscroll = function () {
+        bh = document.body.scrollTop || document.documentElement.scrollTop;
+
+        if (bh >100){
+            ttop.style.top=0;
+        }else{
+            ttop.style.top = -56 +"px";
+        }
+        //菜单
+        let menubtn = document.querySelector(".ttop>i");
+        let smenus = document.querySelector(".ttop .smenu");
+        if (bh< 100){
+            smenus.style.height =0;
+        }
+        menubtn.onclick = function () {
+            if (smenus.style.height == 210 + "px"){
+                smenus.style.height =0;
+            } else{
+                smenus.style.height = 210 +"px";
+            }
+
+        }
+
+    };
+    //下方banner
+    let banner1 = document.querySelector(".goods4 .imgs");
+    let imgs1 = document.querySelectorAll(".goods4 .imgs img");
+    let now1 = 0;
+    let next1 =0;
+    imgs1[0]= imgs1[0].style.opacity=1;
+    console.log(imgs1, banner1);
+    let moveR1 = function () {
+        next1++;
+        if ( next1 == imgs1.length ){
+            next1= 0;
+        }
+        imgs1[now1].style.opacity = 0;
+        imgs1[next1].style.opacity =1;
+
+        now1 = next1;
+    };
+    let t1 = setInterval(moveR1,1000);
+
+</script>
+</html>

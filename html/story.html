@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>story</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/story.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_819176_gjhe4xn07jt.css">
+</head>
+<body>
+<!--顶部悬浮-->
+<div class="ttop">
+    <div class="left">
+        <img src="../img/logox.png">
+    </div>
+    <div class="right">
+        <a href="index.html">HOME  主页</a>
+        <a href="about.html">ABOUT 关于</a>
+        <a href="course.html">COURSE 课程</a>
+        <a href="story.html">STORY 故事</a>
+        <a href="enviroment.html">ENVIROMENT 环境</a>
+        <a href="">EVENT 活动</a>
+        <a href="contcat.html">CONTACT 联系</a>
+    </div>
+    <i class="iconfont icon-menu"></i>
+    <div class="smenu">
+        <a href="index.html">HOME  主页</a>
+        <a href="about.html">ABOUT 关于</a>
+        <a href="course.html">COURSE 课程</a>
+        <a href="story.html">STORY 故事</a>
+        <a href="enviroment.html">ENVIROMENT 环境</a>
+        <a href="">EVENT 活动</a>
+        <a href="contcat.html">CONTACT 联系</a>
+    </div>
+
+</div>
+<!--顶部logo-->
+<div class="top_logo">
+    <img src="../img/logox.png" >
+</div>
+<!--菜单栏-->
+<div class="menu container">
+    <a href="index.html">HOME  主页</a>
+    <a href="about.html">ABOUT 关于</a>
+    <a href="course.html">COURSE 课程</a>
+    <a href="story.html">STORY 故事</a>
+    <a href="enviroment.html">ENVIROMENT 环境</a>
+    <a href="">EVENT 活动</a>
+    <a href="contcat.html">CONTACT 联系</a>
+</div>
+<!--菜单栏结束-->
+<!--标题-->
+<div class="title"><b>
+    ——————————————————    STORY    ——————————————————</b>
+</div>
+<!--标题结束-->
+<!--故事部分详情-->
+<div class="goods1">
+    <div class="container">
+        <ul class="one">
+            <li>
+                <img src="../img/story1.jpg" >
+                <h4>4.29睦野春日游击店的相遇</h4>
+                <p class="text2">详情</p>
+            </li>
+            <li>
+                <img src="../img/story2.jpg" >
+                <h4>MoMo的本子</h4>
+                <p class="text1">Mo是睦野的老同学，在色彩班学习水彩，但她本身就十分擅长绘制彩铅肖像，她笔下的人物神态很好，线条也十分流畅。翻看她画本上的作品，你会被画中的“铅笔力”折服：铅笔这么简单的工具，竟在Mo的手中创造出了如此细腻美好的线条和画面</p>
+                <p class="text2">详情</p>
+            </li>
+            <li>
+                <img src="../img/story3.jpg" >
+                <h4>拜访800年海岛孤塔里的艺术家工作室</h4>
+                <p class="text1">拜访艺术家Paolo Sandali的工作室，对大海有着特殊情愫的意大利艺术家Paolo，25年前来到滨海小镇Praiano，将这座有着800年历史的海边孤塔作为自己的工作室，画画，做雕塑，还养了两只</p>
+                <p class="text2">详情</p>
+            </li>
+            <li>
+                <img src="../img/story4.png" >
+                <h4>ALIENATION</h4>
+                <p class="text1">I am fascinated with creating distance through space and scale. In my street pieces, I (the artist) am a mere passerby. </p>
+                <p class="text2">详情</p>
+            </li>
+        </ul>
+        <div class="right">
+            <div class="htop">
+                COURSE 课程
+            </div>
+            <p class="text1">  —— —— —— —— —— —— —— —— —— ——<br><b>STONY</b><br>—— —— —— —— —— —— —— —— —— ——  </p>
+            <div class="gif"></div>
+            <ul>
+                <li><a href="">睦野朋友</a></li>
+                <li><a href="">睦野同学</a></li>
+                <li><a href="">news</a></li>
+                <li><a href="">2017</a></li>
+                <li><a href="">2016</a></li>
+            </ul>
+            <input class="kuang" type="text" value placeholder="请输入关键字">
+            <div class="downgif"></div>
+        </div>
+    </div>
+</div>
+<!--故事部分详情结束-->
+<!--底部-->
+<!--底部-->
+<div class="footer" >
+    <div class="text">©Terms of Use | Privacy Policy TM & © 2010 - 2020  睦野空间  睦野画舍官方网站 MUYE  Studio. All Rights Reserved. TM & © MUYE  Studio. All Rights Reserved.</div>
+    <img src="../img/logox.png">
+</div>
+<!--结束-->
+
+</body>
+<script>
+    // <!--悬浮窗口-->
+    let ttop = document.querySelector(".ttop");
+    let bh = 0;
+    window.onscroll = function () {
+        bh = document.body.scrollTop || document.documentElement.scrollTop;
+
+        if (bh >100){
+            ttop.style.top=0;
+        }else{
+            ttop.style.top = -56 +"px";
+        }
+        //菜单
+        let menubtn = document.querySelector(".ttop>i");
+        let smenus = document.querySelector(".ttop .smenu");
+        if (bh< 100){
+            smenus.style.height =0;
+        }
+        menubtn.onclick = function () {
+            if (smenus.style.height == 210 + "px"){
+                smenus.style.height =0;
+            } else{
+                smenus.style.height = 210 +"px";
+            }
+
+        }
+
+    };
+</script>
+</html>
